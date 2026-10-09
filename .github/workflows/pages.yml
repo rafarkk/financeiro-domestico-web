@@ -32,6 +32,8 @@ jobs:
       - run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
+          # fase de testes: mostra "Dados de exemplo" e "Apagar tudo" no menu da home
+          VITE_FERRAMENTAS_TESTE: '1'
       # o Pages não conhece as rotas do app; o 404 devolve o próprio app para elas
       - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3

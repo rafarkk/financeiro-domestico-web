@@ -29,8 +29,10 @@ Cada push na `main` roda os testes, gera o build e publica no GitHub Pages
 
 Na home, o menu ⋮ ("Mais Opções") tem duas ferramentas de teste: **Dados de exemplo** (apaga o que
 houver no aparelho e carrega um cenário completo, definido em `src/services/exemplo.js`) e
-**Apagar tudo**. Elas aparecem em `npm run dev`; no build, só ao abrir o app com `?exemplo` no
-endereço (ex.: `http://localhost:4173/?exemplo`).
+**Apagar tudo**. Elas aparecem em `npm run dev`; no build, só se ele for gerado com
+`VITE_FERRAMENTAS_TESTE=1` ou ao abrir o app com `?exemplo` no endereço
+(ex.: `http://localhost:4173/?exemplo`). A publicação no GitHub Pages liga essa variável enquanto
+o app está em testes; para esconder as ferramentas, remova-a de `.github/workflows/pages.yml`.
 
 ## Estrutura
 

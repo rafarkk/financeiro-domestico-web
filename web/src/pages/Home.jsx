@@ -38,9 +38,12 @@ import { VALOR_OCULTO, formatarMoeda } from '../utils/dinheiro.js'
 // Os filtros sobrevivem à navegação entre telas enquanto o app estiver aberto.
 let filtrosEmUso = null
 
-// Ferramentas de teste (dados de exemplo / apagar tudo): aparecem em `npm run dev`
-// ou, no build, abrindo o app com ?exemplo no endereço.
-const MODO_TESTE = import.meta.env.DEV || new URLSearchParams(window.location.search).has('exemplo')
+// Ferramentas de teste (dados de exemplo / apagar tudo): aparecem em `npm run dev`,
+// no build feito com VITE_FERRAMENTAS_TESTE=1 ou abrindo o app com ?exemplo no endereço.
+const MODO_TESTE =
+  import.meta.env.DEV ||
+  import.meta.env.VITE_FERRAMENTAS_TESTE === '1' ||
+  new URLSearchParams(window.location.search).has('exemplo')
 
 const CONFIRMACOES = {
   exemplo: {
