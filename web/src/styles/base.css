@@ -16,7 +16,8 @@ body {
   font-size: 15px;
   line-height: 1.4;
   color: var(--cor-cinza-escuro);
-  background: #f6f6f4 url('../assets/fundo.svg');
+  /* fundo que sobra dos lados da coluna do app em telas largas */
+  background: #e4e7e8;
   overflow-x: hidden;
 }
 
@@ -219,8 +220,6 @@ textarea.entrada {
 
 .pagina {
   width: 100%;
-  max-width: var(--largura-conteudo);
-  margin: 0 auto;
   padding: calc(var(--altura-topo) + var(--seguro-topo) + 12px) 12px 24px;
 }
 

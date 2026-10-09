@@ -1,18 +1,15 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { IconeCasa, IconeGrade, IconeKebab, IconeLista, IconeVoltar } from './Icones.jsx'
-import { Marca, PorquinhoSelo } from './Marca.jsx'
+import { PorquinhoSelo } from './Marca.jsx'
 
 const classeItem = ({ isActive }) => `nav__item${isActive ? ' ativo' : ''}`
 
-// Casca do app: conteúdo + navegação (barra inferior no celular, lateral no desktop).
+// Casca do app: conteúdo + navegação (barra inferior).
 export default function Layout() {
   return (
     <div className="app">
       <Outlet />
       <nav className="nav" aria-label="Navegação principal">
-        <div className="nav__marca">
-          <Marca />
-        </div>
         <NavLink to="/" end className={classeItem} title="Início">
           <IconeCasa />
           <span className="nav__rotulo">Início</span>

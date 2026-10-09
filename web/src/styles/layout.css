@@ -1,12 +1,15 @@
 /* ---------- casca do app ---------- */
 
 .app {
+  max-width: var(--largura-app);
   min-height: 100dvh;
-  padding-left: var(--largura-nav);
+  margin: 0 auto;
+  background: #f6f6f4 url('../assets/fundo.svg');
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 0 24px rgba(0, 0, 0, 0.08);
   padding-bottom: calc(var(--altura-nav) + var(--seguro-base));
 }
 
-/* ---------- navegação: barra inferior no celular, lateral no desktop ---------- */
+/* ---------- navegação: barra inferior, presa à coluna do app ---------- */
 
 .nav {
   position: fixed;
@@ -14,6 +17,8 @@
   right: 0;
   bottom: 0;
   z-index: 60;
+  max-width: var(--largura-app);
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -21,10 +26,6 @@
   padding-bottom: var(--seguro-base);
   background: var(--cor-cinza-claro);
   box-shadow: var(--sombra-barra);
-}
-
-.nav__marca {
-  display: none;
 }
 
 .nav__item {
@@ -52,58 +53,6 @@
   height: 1px;
   overflow: hidden;
   clip-path: inset(50%);
-}
-
-@media (min-width: 900px) {
-  .nav {
-    top: 0;
-    right: auto;
-    width: var(--largura-nav);
-    height: auto;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 4px;
-    padding: 16px 12px;
-    background: var(--cor-branco);
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.15);
-  }
-
-  .nav__marca {
-    display: flex;
-    justify-content: center;
-    padding: 4px 0 20px;
-  }
-
-  .nav__item {
-    display: flex;
-    justify-content: flex-start;
-    gap: 12px;
-    padding: 0 12px;
-    color: #a9a9a9;
-    font-weight: 600;
-  }
-
-  .nav__item svg {
-    width: 26px;
-    height: 26px;
-  }
-
-  .nav__item:hover {
-    background: var(--cor-cinza-claro);
-  }
-
-  .nav__item.ativo {
-    background: var(--cor-laranja-claro);
-  }
-
-  .nav__rotulo {
-    position: static;
-    width: auto;
-    height: auto;
-    clip-path: none;
-    color: var(--cor-cinza-escuro);
-  }
 }
 
 /* ---------- marca ---------- */
@@ -153,9 +102,11 @@
 .topo {
   position: fixed;
   top: 0;
-  left: var(--largura-nav);
+  left: 0;
   right: 0;
   z-index: 50;
+  max-width: var(--largura-app);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -211,11 +162,11 @@
 
 .sheet {
   position: fixed;
-  left: var(--largura-nav);
+  left: 0;
   right: 0;
   bottom: calc(var(--altura-nav) + var(--seguro-base));
   z-index: 105;
-  max-width: 560px;
+  max-width: var(--largura-app);
   margin: 0 auto;
   padding-bottom: 12px;
   background: var(--cor-branco);
@@ -289,19 +240,14 @@
   flex: none;
 }
 
-@media (min-width: 900px) {
-  .sheet {
-    bottom: 24px;
-    border-radius: 20px;
-  }
-}
-
 /* ---------- modal ---------- */
 
 .modal {
   position: fixed;
   inset: 0;
   z-index: 200;
+  max-width: var(--largura-app);
+  margin: 0 auto;
   display: grid;
   place-items: center;
   padding: 16px;
@@ -345,7 +291,7 @@
 
 .toasts {
   position: fixed;
-  left: var(--largura-nav);
+  left: 0;
   right: 0;
   bottom: calc(var(--altura-nav) + var(--seguro-base) + 16px);
   z-index: 300;

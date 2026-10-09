@@ -26,15 +26,8 @@
   /* medidas do layout */
   --altura-topo: 52px;
   --altura-nav: 58px;
-  --largura-nav: 0px;
-  --largura-conteudo: 760px;
+  /* o app é sempre uma coluna em "modo retrato"; em telas largas sobra margem dos lados */
+  --largura-app: 640px;
   --seguro-topo: env(safe-area-inset-top, 0px);
   --seguro-base: env(safe-area-inset-bottom, 0px);
-}
-
-@media (min-width: 900px) {
-  :root {
-    --altura-nav: 0px;
-    --largura-nav: 232px;
-  }
 }

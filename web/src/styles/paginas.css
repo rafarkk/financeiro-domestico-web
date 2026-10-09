@@ -52,11 +52,18 @@
   min-width: 0;
   padding: 0 24px 6px 0;
   overflow-x: auto;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
-.cards-contas::-webkit-scrollbar {
-  display: none;
+/* no toque a lista de contas rola com o dedo e dispensa a barra */
+@media (pointer: coarse) {
+  .cards-contas {
+    scrollbar-width: none;
+  }
+
+  .cards-contas::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .card-conta {
@@ -202,8 +209,6 @@
 /* ---------- home: lançamentos ---------- */
 
 .lancamentos {
-  max-width: var(--largura-conteudo);
-  margin: 0 auto;
   padding: 0 8px 16px;
 }
 
@@ -400,41 +405,4 @@
   width: 22px;
   height: 22px;
   accent-color: var(--cor-laranja);
-}
-
-/* ---------- desktop ---------- */
-
-@media (min-width: 900px) {
-  .home__topo {
-    padding: 16px 24px 4px;
-  }
-
-  .cards-contas {
-    flex-wrap: wrap;
-    overflow: visible;
-    padding-right: 0;
-  }
-
-  /* a marca já está na navegação lateral */
-  .home__marca .marca {
-    display: none;
-  }
-
-  .lancamentos {
-    margin: 0;
-    padding: 0 24px 24px;
-  }
-
-  .pagina {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .faixa-tipo {
-    margin-right: 0;
-  }
-
-  .selo-tipo {
-    border-radius: 25px;
-  }
 }
