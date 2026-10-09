@@ -55,6 +55,18 @@
   scrollbar-width: thin;
 }
 
+/* com mouse, a lista de contas também rola arrastando os cards */
+@media (pointer: fine) {
+  .cards-contas {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .cards-contas:active {
+    cursor: grabbing;
+  }
+}
+
 /* no toque a lista de contas rola com o dedo e dispensa a barra */
 @media (pointer: coarse) {
   .cards-contas {

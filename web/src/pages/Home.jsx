@@ -28,6 +28,7 @@ import { gerarCsv } from '../domain/csv.js'
 import { TipoConta, TipoMovimento } from '../domain/enums.js'
 import { filtrarMovimentacoes, filtrosPadrao } from '../domain/filtros.js'
 import { calcularSaldosPorConta, calcularTotais } from '../domain/saldos.js'
+import { useArrastarParaRolar } from '../hooks/useArrastarParaRolar.js'
 import { useCarregar } from '../hooks/useCarregar.js'
 import { apagarTudo, carregarDadosDeExemplo } from '../services/exemplo.js'
 import { desbloquearVencidas } from '../services/movimentacoes.js'
@@ -152,6 +153,7 @@ function CardMovimentacao({ mov, nomeConta }) {
 
 export default function Home() {
   const avisar = useToast()
+  const arrastar = useArrastarParaRolar()
   const { dados, carregando, recarregar } = useCarregar(carregarHome)
   const [filtros, setFiltros] = useState(() => filtrosEmUso ?? filtrosPadrao(hojeISO()))
   const [rascunho, setRascunho] = useState(filtros)
@@ -237,7 +239,7 @@ export default function Home() {
           {!carregando && contas.length === 0 ? (
             <p className="home__boas-vindas">Cadastre suas contas para poder iniciar o uso do sistema.</p>
           ) : (
-            <div className="cards-contas">
+            <div className="cards-contas" {...arrastar}>
               {contas.map((conta) => (
                 <CardConta
                   key={conta.id}
