@@ -1,4 +1,4 @@
-/* ---------- home: topo turquesa ---------- */
+﻿/* ---------- home: topo turquesa ---------- */
 
 .home__topo {
   padding: calc(var(--seguro-topo) + 6px) 8px 4px;
@@ -50,12 +50,38 @@
   gap: 16px;
   flex: 1;
   min-width: 0;
-  padding: 0 24px 6px 0;
+  padding: 0 24px 8px 0;
   overflow-x: auto;
-  scrollbar-width: thin;
 }
 
-/* com mouse, a lista de contas também rola arrastando os cards */
+/* barra de rolagem das contas: fina e discreta sobre o turquesa */
+.cards-contas::-webkit-scrollbar {
+  height: 4px;
+}
+
+.cards-contas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cards-contas::-webkit-scrollbar-thumb {
+  border: 0;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.cards-contas::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Firefox nÃ£o tem ::-webkit-scrollbar; nos outros, estas propriedades anulariam as regras acima */
+@supports not selector(::-webkit-scrollbar) {
+  .cards-contas {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.45) transparent;
+  }
+}
+
+/* com mouse, a lista de contas tambÃ©m rola arrastando os cards */
 @media (pointer: fine) {
   .cards-contas {
     cursor: grab;
@@ -218,7 +244,7 @@
   font-weight: 600;
 }
 
-/* ---------- home: lançamentos ---------- */
+/* ---------- home: lanÃ§amentos ---------- */
 
 .lancamentos {
   padding: 0 8px 16px;
@@ -311,7 +337,7 @@
   color: var(--cor-cinza-medio);
 }
 
-/* ---------- formulário de lançamento ---------- */
+/* ---------- formulÃ¡rio de lanÃ§amento ---------- */
 
 .faixa-tipo {
   display: flex;

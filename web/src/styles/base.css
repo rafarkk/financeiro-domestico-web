@@ -21,6 +21,29 @@ body {
   overflow-x: hidden;
 }
 
+/* barra de rolagem da página, discreta */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background: #cdd2d4 content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aab1b4;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #cdd2d4 transparent;
+  }
+}
+
 h1,
 h2,
 h3,
