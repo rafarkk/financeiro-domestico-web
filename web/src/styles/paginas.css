@@ -1,0 +1,440 @@
+/* ---------- home: topo turquesa ---------- */
+
+.home__topo {
+  padding: calc(var(--seguro-topo) + 6px) 8px 4px;
+  background: var(--cor-verde-turquesa);
+  color: var(--cor-branco);
+}
+
+.home__onda {
+  width: 100%;
+  height: 44px;
+  margin-top: -1px;
+  color: var(--cor-verde-turquesa);
+}
+
+.home__marca {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  min-height: 50px;
+}
+
+.home__contas {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn-nova-conta {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 130px;
+  flex: none;
+  border-radius: var(--raio);
+  background: var(--gradient-laranja);
+  color: var(--cor-branco);
+}
+
+.home__boas-vindas {
+  align-self: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cards-contas {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+  padding: 0 24px 6px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cards-contas::-webkit-scrollbar {
+  display: none;
+}
+
+.card-conta {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  height: 130px;
+  flex: none;
+  padding-left: 8px;
+  overflow: hidden;
+  border-radius: var(--raio);
+  background: var(--cor-verde-claro);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: var(--cor-cinza-escuro);
+  font-weight: 500;
+}
+
+.card-conta--credito {
+  background: var(--cor-laranja-claro);
+}
+
+.card-conta--desligada {
+  opacity: 0.7;
+}
+
+.card-conta__corpo {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-conta__cabecalho {
+  display: flex;
+  align-items: center;
+}
+
+.card-conta__filtro {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 27px;
+  flex: none;
+  margin-left: -8px;
+  border-radius: var(--raio) 0 var(--raio) 0;
+  background: var(--gradient-laranja);
+  color: var(--cor-branco);
+}
+
+.card-conta__nome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 2px 4px 0 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.card-conta__nome span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-conta__nome svg {
+  flex: none;
+  color: var(--cor-laranja);
+}
+
+.card-conta__valores {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.card-conta__valores strong {
+  margin: -3px 0 3px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-conta__acoes {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 58px;
+}
+
+.card-conta__acao {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  border-radius: 25px 0 0 25px;
+  color: var(--cor-branco);
+}
+
+.card-conta__acao svg {
+  width: 38px;
+  height: 28px;
+}
+
+.acao--despesa {
+  background: var(--cor-vermelho);
+}
+
+.acao--receita {
+  background: var(--cor-verde);
+}
+
+.acao--transferencia {
+  background: var(--cor-roxo);
+}
+
+.totais {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.totais__titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.totais__titulo h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.totais__olho {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 30px;
+  color: var(--cor-laranja);
+}
+
+.totais strong {
+  font-weight: 600;
+}
+
+/* ---------- home: lançamentos ---------- */
+
+.lancamentos {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  padding: 0 8px 16px;
+}
+
+.lancamentos > h2 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.busca {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0 16px;
+}
+
+.busca .btn {
+  flex: none;
+  padding: 8px 14px;
+}
+
+.filtros-avancados {
+  margin-bottom: 16px;
+  padding: 0 10px 14px;
+  border: 2px solid var(--cor-laranja);
+  border-radius: var(--raio);
+  background: var(--cor-cinza-claro);
+}
+
+.filtros-avancados .botoes {
+  margin-top: 16px;
+}
+
+.card-mov {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background: var(--cor-cinza-claro);
+}
+
+.card-mov:hover {
+  background: #f0f0f0;
+}
+
+.card-mov__info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card-mov__info > svg {
+  flex: none;
+}
+
+.card-mov__textos {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-mov__data {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+}
+
+.card-mov__conta,
+.card-mov__valor {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.card-mov__conta,
+.card-mov__descricao {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-mov__descricao {
+  font-size: 12px;
+  color: var(--cor-cinza-medio);
+}
+
+/* ---------- formulário de lançamento ---------- */
+
+.faixa-tipo {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -12px;
+}
+
+.selo-tipo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 6px 16px 6px 12px;
+  border-radius: 25px 0 0 25px;
+  color: var(--cor-branco);
+  font-weight: 700;
+}
+
+.selo-tipo svg {
+  width: 38px;
+  height: 28px;
+  flex: none;
+}
+
+.selo-tipo span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- planejamento ---------- */
+
+.atalhos-plan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.atalhos-plan .btn {
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 4px;
+  font-size: 14px;
+}
+
+.atalhos-plan svg {
+  width: 40px;
+  height: 26px;
+}
+
+.divisor-mes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 4px;
+  font-weight: 600;
+}
+
+.divisor-mes::before {
+  content: '';
+  width: 28px;
+  border-top: 1px solid var(--cor-cinza-borda);
+}
+
+.divisor-mes::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid var(--cor-cinza-borda);
+}
+
+.card-previsto__topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selo-previsto {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 30px;
+  flex: none;
+  border-radius: 25px;
+  color: var(--cor-branco);
+}
+
+.selo-previsto svg {
+  width: 34px;
+  height: 22px;
+}
+
+.card-previsto__check {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  cursor: pointer;
+}
+
+.card-previsto__check input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--cor-laranja);
+}
+
+/* ---------- desktop ---------- */
+
+@media (min-width: 900px) {
+  .home__topo {
+    padding: 16px 24px 4px;
+  }
+
+  .cards-contas {
+    flex-wrap: wrap;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  /* a marca já está na navegação lateral */
+  .home__marca .marca {
+    display: none;
+  }
+
+  .lancamentos {
+    margin: 0;
+    padding: 0 24px 24px;
+  }
+
+  .pagina {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .faixa-tipo {
+    margin-right: 0;
+  }
+
+  .selo-tipo {
+    border-radius: 25px;
+  }
+}

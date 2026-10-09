@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 104" fill="none">
+  <defs>
+    <linearGradient id="pg-laranja" x1="14" y1="90" x2="68" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FE9661"/>
+      <stop offset="1" stop-color="#FFB369"/>
+    </linearGradient>
+    <linearGradient id="pg-turquesa" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#28A6BB"/>
+      <stop offset="1" stop-color="#65C1D6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- moeda -->
+  <circle cx="48" cy="20" r="17" fill="url(#pg-laranja)" stroke="#FDDC85" stroke-width="3"/>
+  <path d="M53.600 14.600c-1.100-2.100-3.200-3.300-5.800-3.300-3.300 0-5.700 1.900-5.700 4.600 0 2.900 2.300 4.200 5.900 4.800 3.700.6 5.900 2 5.900 4.900 0 2.800-2.500 4.800-5.900 4.800-2.800 0-5-1.300-6.200-3.500" stroke="#FDDC85" stroke-width="2.600" stroke-linecap="round"/>
+  <path d="M48 7.500v25" stroke="#FDDC85" stroke-width="2.600" stroke-linecap="round"/>
+
+  <!-- pés -->
+  <rect x="17" y="78" width="19" height="25" rx="6" fill="url(#pg-turquesa)"/>
+  <rect x="60" y="78" width="19" height="25" rx="6" fill="url(#pg-turquesa)"/>
+
+  <!-- orelhas -->
+  <path d="M8 21c8.500 2.400 15.500 9.200 17 18.500L12.500 53C2.500 45 .8 31 8 21Z" fill="url(#pg-turquesa)"/>
+  <path d="M10 29c4.600 1.900 8 5.600 9 10.300l-6 7c-4-4.600-5-11.800-3-17.300Z" fill="#28A6BB"/>
+  <g transform="translate(96 0) scale(-1 1)">
+    <path d="M8 21c8.500 2.400 15.500 9.200 17 18.500L12.500 53C2.500 45 .8 31 8 21Z" fill="url(#pg-turquesa)"/>
+    <path d="M10 29c4.600 1.900 8 5.600 9 10.300l-6 7c-4-4.600-5-11.800-3-17.300Z" fill="#28A6BB"/>
+  </g>
+
+  <!-- corpo -->
+  <ellipse cx="48" cy="62" rx="43" ry="34" fill="url(#pg-laranja)"/>
+  <rect x="38" y="31.500" width="20" height="3.600" rx="1.800" fill="#C77538"/>
+
+  <!-- olhos -->
+  <ellipse cx="32" cy="50" rx="8.500" ry="9" fill="#EFEFEF"/>
+  <ellipse cx="64" cy="50" rx="8.500" ry="9" fill="#EFEFEF"/>
+  <circle cx="34" cy="50" r="2.700" fill="#525C6B"/>
+  <circle cx="66" cy="50" r="2.700" fill="#525C6B"/>
+
+  <!-- focinho -->
+  <ellipse cx="48" cy="75" rx="14.500" ry="10.500" fill="url(#pg-turquesa)"/>
+  <circle cx="43" cy="75" r="2.200" fill="#525C6B"/>
+  <circle cx="53" cy="75" r="2.200" fill="#525C6B"/>
+</svg>

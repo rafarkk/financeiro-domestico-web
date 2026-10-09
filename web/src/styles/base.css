@@ -1,0 +1,371 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--fonte);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--cor-cinza-escuro);
+  background: #f6f6f4 url('../assets/fundo.svg');
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-laranja);
+  outline-offset: 2px;
+}
+
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- botões ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 8px 20px;
+  border-radius: var(--raio);
+  font-weight: 600;
+  color: var(--cor-branco);
+  background: var(--cor-verde);
+  text-align: center;
+  transition: filter 0.15s, transform 0.1s;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn--laranja {
+  background: var(--gradient-laranja);
+}
+
+.btn--vermelho {
+  background: var(--cor-vermelho);
+}
+
+.btn--roxo {
+  background: var(--cor-roxo);
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin-top: 28px;
+}
+
+/* ---------- formulários ---------- */
+
+.campo {
+  display: block;
+  margin-top: 12px;
+}
+
+.campo__rotulo {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.entrada {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 8px;
+  background: var(--cor-branco);
+  /* 16px evita o zoom automático do iOS ao focar o campo */
+  font-size: 16px;
+}
+
+textarea.entrada {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.entrada:focus {
+  outline: none;
+  border-color: var(--cor-laranja);
+  box-shadow: 0 0 0 1px var(--cor-laranja);
+}
+
+.entrada:disabled {
+  background: #ececec;
+  color: var(--cor-cinza-medio);
+}
+
+.entrada--curta {
+  max-width: 120px;
+}
+
+.entrada-moeda {
+  position: relative;
+}
+
+.entrada-moeda__simbolo {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cor-cinza-medio);
+  pointer-events: none;
+}
+
+.entrada-moeda .entrada {
+  padding-left: 42px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.check input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--cor-laranja);
+}
+
+.linha-campos {
+  display: grid;
+  /* minmax(0, ...) impede que um campo largo (ex.: data) estoure a coluna */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 0 12px;
+}
+
+.linha-campos .entrada {
+  min-width: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.linha-campos .entrada-moeda .entrada {
+  padding-left: 42px;
+}
+
+/* ---------- páginas internas ---------- */
+
+.pagina {
+  width: 100%;
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  padding: calc(var(--altura-topo) + var(--seguro-topo) + 12px) 12px 24px;
+}
+
+.formulario {
+  background: var(--cor-branco);
+  border-radius: var(--raio-card);
+  padding: 4px 16px 24px;
+}
+
+.carregando {
+  padding: 32px 0;
+  text-align: center;
+  font-style: italic;
+  color: var(--cor-cinza-medio);
+}
+
+/* ---------- busca ---------- */
+
+.pesquisa {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+.pesquisa__entrada {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  padding: 6px 12px;
+  border: 2px solid var(--cor-laranja);
+  border-right: 0;
+  border-radius: var(--raio) 0 0 var(--raio);
+  background: var(--cor-branco);
+  font-size: 16px;
+}
+
+.pesquisa__entrada:focus {
+  outline: none;
+}
+
+.pesquisa__botao {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  border-radius: 0 var(--raio) var(--raio) 0;
+  background: var(--gradient-laranja);
+  color: var(--cor-branco);
+}
+
+/* ---------- cards de listagem ---------- */
+
+.card-listagem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  padding: 8px 8px 8px 12px;
+  background: var(--cor-cinza-claro);
+  border: 4px solid var(--cor-cinza-linha);
+  border-radius: var(--raio-card);
+}
+
+.card-listagem--fixo {
+  border-left: 8px solid lightgreen;
+}
+
+.card-listagem--variavel {
+  border-left: 8px solid cornflowerblue;
+}
+
+.card-listagem__dados {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-listagem__linha {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* a primeira coluna (nome da conta) cede espaço; valor e data nunca são cortados */
+.card-listagem__linha .dado:first-child {
+  flex: 1;
+}
+
+.card-listagem__linha .dado:not(:first-child) {
+  flex: none;
+  min-width: 76px;
+}
+
+.dado {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dado__titulo {
+  font-size: 12px;
+}
+
+.dado__valor {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-listagem__acao {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: var(--raio);
+}
+
+.texto-verde {
+  color: var(--cor-verde);
+}
+
+.texto-vermelho {
+  color: var(--cor-vermelho);
+}
+
+/* ---------- estado vazio ---------- */
+
+.vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.vazio img {
+  width: 100px;
+}
+
+.vazio p {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

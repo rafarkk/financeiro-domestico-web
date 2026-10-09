@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#28A6BB" />
+    <meta name="description" content="DinDinGuru: controle financeiro doméstico." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="DinDinGuru" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>DinDinGuru</title>
+    <style>
+      /* tela de abertura enquanto o app carrega */
+      .abertura {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: #28a6bb;
+      }
+      .abertura::after {
+        content: '';
+        width: 44px;
+        height: 44px;
+        border: 5px solid rgba(255, 255, 255, 0.35);
+        border-top-color: #fe9661;
+        border-radius: 50%;
+        animation: girar 0.8s linear infinite;
+      }
+      @keyframes girar {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div class="abertura" role="status" aria-label="Carregando"></div></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

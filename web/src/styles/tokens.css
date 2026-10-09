@@ -1,0 +1,40 @@
+:root {
+  /* paleta do DinDinGuru */
+  --cor-roxo: #b05cf0;
+  --cor-branco: #ffffff;
+  --cor-cinza-claro: #f8f8f8;
+  --cor-cinza-linha: #f1f1f1;
+  --cor-cinza-borda: #c1c1c1;
+  --cor-cinza-medio: #7b8085;
+  --cor-cinza-escuro: #3a3d40;
+  --cor-verde: #3daa9d;
+  --cor-verde-turquesa: #28a6bb;
+  --cor-verde-claro: #cff8f3;
+  --cor-laranja: #fe9661;
+  --cor-laranja-escuro: #c77538;
+  --cor-laranja-claro: #fceddb;
+  --cor-vermelho: #db5743;
+  --cor-amarelo: #fddc85;
+  --gradient-laranja: linear-gradient(44.98deg, #fe9661 14.63%, #ffb369 85.3%);
+
+  --fonte: 'Montserrat Variable', 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --raio: 10px;
+  --raio-card: 12px;
+  --sombra-barra: 0 -1px 3px rgba(0, 0, 0, 0.25);
+
+  /* medidas do layout */
+  --altura-topo: 52px;
+  --altura-nav: 58px;
+  --largura-nav: 0px;
+  --largura-conteudo: 760px;
+  --seguro-topo: env(safe-area-inset-top, 0px);
+  --seguro-base: env(safe-area-inset-bottom, 0px);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --altura-nav: 0px;
+    --largura-nav: 232px;
+  }
+}
